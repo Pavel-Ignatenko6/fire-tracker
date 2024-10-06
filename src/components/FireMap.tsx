@@ -4,7 +4,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 
 export const FireMap = () => {
   return (
-    <MapContainer center={[7.099, 125.625]} zoom={15}>
+    <MapContainer center={[34.057124, -118.388622]} zoom={12}>
       <TileLayer
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'

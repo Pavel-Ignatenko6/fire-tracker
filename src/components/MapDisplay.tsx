@@ -1,12 +1,7 @@
-import { ReactNode } from 'react';
+
 import styles from './MapDisplay.module.css';
 import { Switch } from './switch/Switch';
-
-interface MapDisplayProps {
-  mapDisplayClass: string;
-  onToggle: () => void;
-  handleMapChange: () => ReactNode;
-}
+import { MapDisplayProps } from '../App';
 
 export const MapDisplay = ({ mapDisplayClass, onToggle, handleMapChange }: MapDisplayProps) => {
   return (

@@ -1,7 +1,8 @@
 import styles from './Switch.module.css';
+import { SwitchProps } from '../../App';
 
-// Custom Switch Toogle Button
-export const Switch = ({ rounded = false, mapDisplayClass, onToggle }) => {
+// Custom Switch ToogMapDisplayPropsle Button
+export const Switch = ({ rounded = false, mapDisplayClass, onToggle }: SwitchProps) => {
   return (
     <label className={styles.switch}>
       <input
