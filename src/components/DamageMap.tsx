@@ -1,17 +1,19 @@
 import 'leaflet/dist/leaflet.css';
-import styles from './DamageMap.module.css';
 import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapEvents } from './MapEvents';
+import { getCenterFromlStorage } from '../helpers/handleLocalStorage';
 
 export const DamageMap = () => {
   return (
     <MapContainer
-      center={[34.057124, -118.388622]}
+      center={getCenterFromlStorage()}
       zoom={12}
     >
       <TileLayer
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'
       />
+      <MapEvents />
     </MapContainer>
   );
 };
