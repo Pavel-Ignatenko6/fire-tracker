@@ -5,14 +5,11 @@ import './index.css';
 // Router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // Redux
-import { Provider } from 'react-redux';
-import { store } from './state/store.ts';
+// import { Provider } from 'react-redux';
+// import { store } from './state/store.ts';
 // Components
 import { Layout } from './layout/Layout.tsx';
 import { NotFoundPage } from './NotFoundPage.tsx';
-// import { MapContainer } from './components/MapContainer.tsx';
-// import { FireMap } from './components/FireMap.tsx';
-// import { DamageMap } from './components/DamageMap.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,16 +19,6 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <App />,
-        // children: [
-        //   {
-        //     path: '/',
-        //     element: <MapContainer children={<FireMap />} />,
-        //   },
-        //   {
-        //     path: '/damage',
-        //     element: <MapContainer children={<DamageMap />} />,
-        //   },
-        // ],
       },
     ],
   },
@@ -39,8 +26,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
       <RouterProvider router={router} />
-    </Provider>
+    {/* </Provider> */}
   </StrictMode>
 );

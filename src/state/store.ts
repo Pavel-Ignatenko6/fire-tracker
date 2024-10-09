@@ -1,8 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit';
-// reducers
+// import { configureStore } from '@reduxjs/toolkit';
+// // reducers
+// import coordsReducer from './coordsSlice';
 
-export const store = configureStore({
-    reducer: {
+// export const store = configureStore({
+//     reducer: {
         
-    },
-})
+//     },
+// })
