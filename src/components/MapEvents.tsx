@@ -5,6 +5,7 @@ export const MapEvents = () => {
     // change center coords when map is moved
     moveend: () => {
       localStorage.setItem('centerCoords', JSON.stringify(map.getCenter()));
+      localStorage.setItem('zoom', JSON.stringify(map.getZoom()));
     },
   });
   return null;
