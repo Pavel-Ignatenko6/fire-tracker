@@ -3,6 +3,12 @@ import './App.css';
 // components
 import { MapDisplay } from './components/MapDisplay.tsx';
 
+// URLs
+export const baseUrl = 'http://localhost:5001';
+const objects = '/objects';
+
+export const objectsUrl = `${baseUrl}${objects}`;
+
 
 export interface MapDisplayProps {
   mapDisplayClass: string;
@@ -14,25 +20,15 @@ export interface SwitchProps {
   onToggle: () => void;
   rounded: boolean;
 }
-// функция возвращающая объект на будущее :)
-// export const renderObjects = () => {
-//   return {
-//     hotels: [
-//       {
-//         name: 'The Maybourne Beverly Hills',
-//         geocode: [34.067719, -118.398949],
-//         owner: '...',
-//         description: '...',
-//
-//       },
-//     ],
-//     restaurants: [],
-//     hospitals: [],
-//     policeStations: [],
-//     fireStations: [],
-//     gasStations: [],
-//   };
-// }
+
+export interface MapObject {
+  id: string;
+  marker: string;
+  coords: [number, number];
+  title: string;
+  cost: number;
+  insuarance: number | null;
+}
 
 function App() {
   const [mapDisplayClass, setMapDisplayClass] = useState('fire-map');

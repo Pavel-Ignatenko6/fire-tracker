@@ -1,6 +1,6 @@
 export const getCenterFromStorage = (): [number, number] => {
   const stored = localStorage.getItem('centerCoords');
-  return stored ? JSON.parse(stored!) : [40.281417784856544, 9.625139236450195];
+  return stored ? JSON.parse(stored!) : [35.448564647910466, -83.47715950025304];
 };
 
 export const getZoomFromStorage = (): number => {

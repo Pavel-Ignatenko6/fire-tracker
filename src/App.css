@@ -1,4 +1,6 @@
-
+h1 {
+    font-size: 2rem;
+}
 
 .leaflet-container {
     min-height: 40vh;
