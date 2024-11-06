@@ -5,10 +5,10 @@ import './index.css';
 // Router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // Redux
-// import { Provider } from 'react-redux';
-// import { store } from './state/store.ts';
+import { Provider } from 'react-redux';
+import { store } from './state/store.ts';
 // Components
-import { Layout } from './layout/Layout.tsx';
+import { Layout } from './components/Layout.tsx';
 import { NotFoundPage } from './NotFoundPage.tsx';
 
 const router = createBrowserRouter([
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
       <RouterProvider router={router} />
-    {/* </Provider> */}
+    </Provider>
   </StrictMode>
 );
