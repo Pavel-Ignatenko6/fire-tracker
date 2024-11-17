@@ -2,13 +2,13 @@ import { useState } from 'react';
 import './App.css';
 // components
 import { MapDisplay } from './components/MapDisplay.tsx';
+import { SideBar } from './components/SideBar.tsx';
 
 // URLs
 export const baseUrl = 'http://localhost:5001';
 const objects = '/objects';
 
 export const objectsUrl = `${baseUrl}${objects}`;
-
 
 export interface MapDisplayProps {
   mapDisplayClass: string;
@@ -42,6 +42,7 @@ function App() {
         mapDisplayClass={mapDisplayClass}
         onToggle={onToggle}
       />
+      <SideBar />
     </>
   );
 }
