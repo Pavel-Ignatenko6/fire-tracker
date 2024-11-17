@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 // reducers
-import { markersSlice } from './MarkersSlice';
+import { mapObjectsSlice } from './mapObjectsSlice';
+import { popupStateSlice } from './popupStateSlice';
+import { sidebarObjectSlice } from './sidebarObjectState';
 
 export const store = configureStore({
-    reducer: {
-        markers: markersSlice.reducer,
-    },
-})
+  reducer: {
+    mapObjects: mapObjectsSlice.reducer,
+    popupState: popupStateSlice.reducer,
+    sidebarObject: sidebarObjectSlice.reducer,
+  },
+});
