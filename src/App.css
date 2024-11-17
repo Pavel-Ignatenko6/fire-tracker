@@ -6,4 +6,5 @@ h1 {
     min-height: 40vh;
     height: 70vh;
     width: 60rem;
+    z-index: 1;
 }

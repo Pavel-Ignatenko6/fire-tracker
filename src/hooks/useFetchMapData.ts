@@ -1,4 +1,3 @@
-// create custom hook that contains the fetch logic (use code from markers.tsx + this file)
 import { useEffect } from 'react';
 // redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,7 +8,7 @@ import {
   addBuilds,
   addResources,
   addFireExtinguishingAgents,
-} from '../state/MarkersSlice';
+} from '../state/mapObjectsSlice';
 
 export const useFetchMapData = (url: string) => {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ export const useFetchMapData = (url: string) => {
       dispatch(addBuilds(builds));
       dispatch(addResources(resources));
       dispatch(addFireExtinguishingAgents(fireExtinguishingAgents));
-    } 
+    }
     fetchData();
   }, []);
 
